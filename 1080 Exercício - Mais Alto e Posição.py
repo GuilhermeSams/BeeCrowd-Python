@@ -1,8 +1,12 @@
 '''Leia 100 números inteiros. Imprima o valor de leitura mais alto e a posição de entrada.'''
 
-lista = []
-for c in range(5):
+maior_num = pos_maior = 0
+
+for c in range(100):
     n = int(input())
-    lista += [n]
-print(f'{max(lista)}')
-print(lista.index(lista)+1)
+    if n > maior_num:
+        maior_num = n
+        pos_maior = c
+
+print(maior_num)
+print(pos_maior + 1)
